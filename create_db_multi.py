@@ -6,7 +6,7 @@ import glob
 
 # --- CẤU HÌNH ---
 DATA_DIR = 'dataset_train' # Folder chứa các folder con của từng người
-DB_PATH = 'face_database.pt'
+DB_PATH = 'model/face_database.pt'
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 def create_multi_user_db():

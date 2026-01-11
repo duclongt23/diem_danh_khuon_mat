@@ -22,4 +22,4 @@ def extract_images_from_video(video_path, output_folder, interval=10):
     cap.release()
     print(f"Đã thu thập {saved_count} ảnh từ video.")
 
-extract_images_from_video('duc_long.mp4', 'dataset_train/0_me', interval=30)
+extract_images_from_video('duc_long.mp4', 'dataset_train/person1', interval=30)

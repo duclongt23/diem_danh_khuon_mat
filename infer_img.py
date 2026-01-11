@@ -6,7 +6,7 @@ from facenet_pytorch import MTCNN, InceptionResnetV1, fixed_image_standardizatio
 import os
 
 # --- CẤU HÌNH ---
-DB_PATH = 'face_database.pt' # File database chứa nhiều người
+DB_PATH = 'model/face_database.pt' # File database chứa nhiều người
 THRESHOLD = 0.75             # Ngưỡng nhận diện (tinh chỉnh từ 0.6 - 0.8)
 
 # Thiết lập thiết bị
@@ -149,3 +149,5 @@ if __name__ == '__main__':
     # Tạo file giả nếu chưa có
     if not os.path.exists(TEST_IMAGE):
         print(f"File {TEST_IMAGE} không tồn tại. Vui lòng copy ảnh vào để test.")
+    else:
+        recognize_faces_in_image(TEST_IMAGE, output_path="result_multi.jpg")
